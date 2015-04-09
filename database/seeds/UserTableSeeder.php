@@ -23,7 +23,8 @@ class UserTableSeeder extends Seeder {
                 'user_id'   => $user_id,
                 'bio'       => $faker->paragraph(rand(2, 5)),
                 'twitter'   => 'http://www.twitter.com/' . $faker->userName,
-                'website'   => $faker->url
+                'website'   => $faker->url,
+                'birthdate'    => $faker->dateTimeBetween('-55 years', '-15 years')->format('Y-m-d')
             ]);
         }
     }
